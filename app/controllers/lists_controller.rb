@@ -5,6 +5,8 @@ class ListsController < ApplicationController
   # GET /lists.json
   def index
     @lists = List.all
+    @sumValue = List.sum(:value)
+    @itemNum = List.count(:item)
   end
 
   # GET /lists/1

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>List</h1>
+<h1 class="text-primary">List</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Item</th>
@@ -18,7 +18,7 @@
         <td><%= list.value %></td>
         <td><%= link_to 'Show', list %></td>
         <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,12 @@
 
 <br>
 
+
+<p class="lead">Value Total:  <b><%= number_to_currency(@sumValue, :unit => "$") %></b> </p>
+<p class="lead">Number of Items: <b><%= @itemNum %></b> </p>
+
+
+
 <%= link_to 'New Item', new_list_path %>
+
+<p id="pdf_link"><%= link_to "Download List (PDF)", lists_path(@lists, :format => "pdf") %></p>

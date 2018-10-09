@@ -12,19 +12,19 @@
   <% end %>
 
   
- <div class="field">
+ <div class="field form-group">
     <%= form.label :item %>
-    <%= form.text_field :item %>
+    <%= form.text_field :item, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :value %>
-    <%= form.number_field :value %>
+    <%= form.number_field :value, class:'form-control' %>
   </div>
  
 
   <div class="actions">
-    <%= form.submit "Add Item" %>
+    <%= form.submit "Add Item", class: "btn btn-primary" %>
   </div>
  
 <% end %>

@@ -13,6 +13,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+# PDF 
+#gem 'pdfkit'
+#gem 'wkhtmltopdf-binary'
+
 # Use Bootstrap for Styles
 gem 'bootstrap'
 gem 'jquery-rails'
