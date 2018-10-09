@@ -11,7 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
+  
+ <div class="field">
     <%= form.label :item %>
     <%= form.text_field :item %>
   </div>
@@ -20,8 +21,10 @@
     <%= form.label :value %>
     <%= form.number_field :value %>
   </div>
+ 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Add Item" %>
   </div>
+ 
 <% end %>
