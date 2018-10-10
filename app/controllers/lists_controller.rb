@@ -44,7 +44,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, alert: 'alert-warning', notice: 'List was successfully updated.' }
+        format.html { redirect_to @list, alert: 'alert-warning', notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @list }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url, alert: 'alert-danger', notice: 'List was successfully destroyed.' }
+      format.html { redirect_to lists_url, alert: 'alert-danger', notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
