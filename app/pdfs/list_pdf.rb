@@ -19,7 +19,7 @@ class ListPdf < Prawn::Document
   def line_item_rows
     [["Items", "Value"]] +
     @list.map do |item|
-      [item.item, price(item.value)]
+      [item.item.capitalize, price(item.value)]
     end
   end
   
