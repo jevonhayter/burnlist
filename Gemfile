@@ -17,6 +17,8 @@ group :production do
 end
 
 # PDF 
+gem 'prawn'
+gem 'prawn-table', '~> 0.2.2'
 #gem 'pdfkit'
 #gem 'wkhtmltopdf-binary'
 

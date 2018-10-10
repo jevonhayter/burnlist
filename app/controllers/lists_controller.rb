@@ -7,6 +7,16 @@ class ListsController < ApplicationController
     @lists = List.all
     @sumValue = List.sum(:value)
     @itemNum = List.count(:item)
+    
+    respond_to do |format|
+      format.html
+      format.pdf do
+        pdf = ListPdf.new(@lists, view_context)
+        send_data pdf.render, filename: "InsuranceInventoryList.pdf",
+                              type: "application/pdf",
+                              disposition: "inline"
+      end
+    end
   end
 
   # GET /lists/1
