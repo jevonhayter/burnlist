@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div class="alert <%= alert %>" role="alert">
+  <p id="notice"><%= notice %></p>
+</div>
 
 <h1 class="text-primary">List</h1>
 
@@ -13,7 +15,7 @@
 
   <tbody>
     <% @lists.each do |list| %>
-      <tr class="info">
+      <tr>
         <td><%= list.item %></td>
         <td><%= list.value %></td>
         <td><%= link_to 'Show', list %></td>
